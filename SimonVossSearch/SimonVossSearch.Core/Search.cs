@@ -10,19 +10,19 @@ public class Field
     public string Type { get; set; }
     public string Property { get; set; } // (??)
     public string Value { get; set; } 
-    public int Distance { get; set; }
-    public bool FullMatch { get; set; }
-    public bool PartialMatch { get; set; }
-
+    public float StrLen { get; set; }
+    public float Distance { get; set; }
+    public float Match { get; set; }
+    
     public Field(Guid id, string type, string property, string value, string targetString)
     {
         Id = id;
         Type = type;
         Property = property;
         Value = value;
-        FullMatch = value == targetString;
-        PartialMatch = value.Contains(targetString);
         Distance = CalculateDistance(value, targetString);
+        StrLen = value.Length;
+        Match = 1 - Distance / StrLen;
     }
     private int CalculateDistance(string src, string str)
     {
@@ -51,6 +51,27 @@ public class Field
         return mtx[srcLength, strLength];
     
     }
+
+    /*private int Weight()
+    {
+        switch (Type)
+        {
+            case "Building":
+                switch (Property)
+                {
+                    case "ShortCut":
+                        return 7;
+                    case "Description":
+                        return 5;
+                    case "Name":
+                        return 9;
+                }
+
+                ; break;
+        }
+
+        return 0;
+    }*/
 }
 
 public static class Search
