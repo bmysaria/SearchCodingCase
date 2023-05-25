@@ -5,24 +5,26 @@ public class Field
     public Guid Id { get; set; }
     public string Type { get; set; }
     public string Property { get; set; } // (??)
-    public string Value { get; set; } 
-    public float StrLen { get; set; }
-    public float Distance { get; set; }
-    public float NormDistance { get; set; }
-    public float Weight { get; set; }
-
-    public Field(Guid id, string type, string property, string value, string targetString)
+    public string Value { get; set; }
+    public double Weight { get; set; }
+    public Field(Guid id, string type, string property, string value)
     {
         Id = id;
         Type = type;
         Property = property;
         Value = value;
-        StrLen = value.Length;
-        Distance = CalculateDistance(value.ToLower(), targetString.ToLower());
-        NormDistance = NormalizeDistance((float)Distance, (float)StrLen);
     }
 
-    private float NormalizeDistance(float distance, float strlen)
+    public void CalcilateWeight(double w)
+    {
+        if ((int)w == 1)
+            Weight = w * SelfWeight()*10;
+        else if ((int)w > 0.1)
+            Weight = w * SelfWeight();
+        else
+            Weight = w;
+    }
+    /*private float NormalizeDistance(float distance, float strlen)
     {
         return 1 - distance / strlen;
     }
@@ -52,7 +54,7 @@ public class Field
 
         return mtx[srcLength, strLength];
     
-    }
+    }*/
 
     private int SelfWeight()
     {
