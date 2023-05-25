@@ -10,8 +10,8 @@ var app = builder.Build();
 string path = File.ReadAllText("./data.json");
 var data = JsonConvert.DeserializeObject<DataFile>(path);
 
-var search = new Search(data, "Head");
+var search = new Search(data, "wc");
 search.Execute();
 
-app.MapGet("/", () => "Hello World!");
+//app.MapGet("/", () => "Hello World!");
 app.Run();

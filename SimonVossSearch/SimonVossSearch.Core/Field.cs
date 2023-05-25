@@ -13,9 +13,10 @@ public class Field
         Type = type;
         Property = property;
         Value = value;
+        Weight = 0;
     }
 
-    public void CalcilateWeight(double w)
+    public void CalculateWeight(double w)
     {
         if ((int)w == 1)
             Weight = w * SelfWeight()*10;
@@ -24,37 +25,12 @@ public class Field
         else
             Weight = w;
     }
-    /*private float NormalizeDistance(float distance, float strlen)
-    {
-        return 1 - distance / strlen;
-    }
-    private int CalculateDistance(string src, string str)
-    {
-        var srcLength = src.Length;
-        var strLength = str.Length;
-        
-        int[,] mtx = new int[srcLength + 1, strLength + 1];
-        
-        for (int i = 0; i <= srcLength; i++)
-            mtx[i, 0] = i;
-        for (int j = 0; j <= strLength; j++)
-            mtx[0, j] = j;
-        
-        for (int i = 1; i <= srcLength; i++)
-        {
-            for (int j = 1; j <= strLength; j++)
-            {
-                int cost = (src[i - 1] == str[j - 1]) ? 0 : 1;
-                mtx[i, j] = Math.Min(
-                    Math.Min(mtx[i - 1, j] + 1, // delete
-                        mtx[i, j - 1] + 1), // insert
-                    mtx[i - 1, j - 1] + cost); // substitute
-            }
-        }
 
-        return mtx[srcLength, strLength];
-    
-    }*/
+    public void CalculateWeight(string parentProperty)
+    {
+        double newWeight = ParentWeight(parentProperty);
+        Weight = Math.Max(Weight, newWeight);
+    }
 
     private int SelfWeight()
     {
@@ -119,13 +95,13 @@ public class Field
         return 1;
     }
 
-    /*private int ParentWeight()
+    private int ParentWeight(string parentProperty)
     {
         int weight=0;
         switch (Type)
         {
             case "Lock" :
-                switch (ParentProperty)
+                switch (parentProperty)
                 {
                     case "Name":
                         weight += 8;
@@ -136,7 +112,17 @@ public class Field
                 }
                 ;
                 break;
+            case "Medium":
+                switch (parentProperty)
+                {
+                    case "Name":
+                        weight += 8;
+                        break;
+                }
+                ;
+                break;
+                
         }
         return weight;
-    }*/
+    }
 }
