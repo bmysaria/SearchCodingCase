@@ -15,20 +15,6 @@ public class Search
     {
         this._data = data;
         _targetString = targetString.ToLower();
-        AssignChildren();
-    }
-
-    private void AssignChildren()
-    {
-        foreach (var building in _data.Buildings)
-        {
-            building.Locks = _data.Locks.Where(x => x.BuildingId == building.Id).ToList() ;
-        }
-
-        foreach (var group_ in _data.Groups)
-        {
-            group_.Mediums = _data.Media.Where(x => x.GroupId == group_.Id).ToList() ;
-        }
     }
 
     public /*List<string> */ void Execute()
@@ -172,7 +158,7 @@ public class Search
         List<IEntity> entities = new List<IEntity>();
         entities = entities.Concat(_data.Buildings).Concat(_data.Locks).Concat(_data.Groups).Concat(_data.Media)
             .ToList();
-        
+        Guid parentId = Guid.Empty;
         foreach (var entity in entities)
         {
             var type = entity.GetType();
@@ -184,7 +170,7 @@ public class Search
                 var value = prop.GetValue(entity, null) == null ? "" : prop.GetValue(entity, null).ToString().ToLower();
                 if (string.IsNullOrEmpty(value))
                     continue;
-                var field = new Field(entity.Id, type.Name, prop.Name, value);
+                var field = new Field(entity.Id, type.Name, prop.Name, value, entity.ParentId);
                 fields.Add(field);
             }
         }

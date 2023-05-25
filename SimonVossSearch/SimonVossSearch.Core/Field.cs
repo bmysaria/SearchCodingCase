@@ -3,17 +3,19 @@ namespace SimonVossSearch.Core;
 public class Field
 {
     public Guid Id { get; set; }
+    public Guid ParentId { get; set; }
     public string Type { get; set; }
     public string Property { get; set; } // (??)
     public string Value { get; set; }
     public double Weight { get; set; }
-    public Field(Guid id, string type, string property, string value)
+    public Field(Guid id, string type, string property, string value, Guid parentId)
     {
         Id = id;
         Type = type;
         Property = property;
         Value = value;
         Weight = 0;
+        ParentId = parentId;
     }
 
     public void CalculateWeight(double w)
