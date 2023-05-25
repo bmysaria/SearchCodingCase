@@ -6,4 +6,5 @@ public class Building : IEntity
     public string ShortCut { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
+    public List<Lock> Locks = new List<Lock>();
 }

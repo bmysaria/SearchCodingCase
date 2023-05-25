@@ -8,20 +8,18 @@ public class Field
     public string Value { get; set; } 
     public float StrLen { get; set; }
     public float Distance { get; set; }
+    public float NormDistance { get; set; }
     public float Weight { get; set; }
+
     public Field(Guid id, string type, string property, string value, string targetString)
     {
         Id = id;
         Type = type;
         Property = property;
         Value = value;
-        
         StrLen = value.Length;
         Distance = CalculateDistance(value.ToLower(), targetString.ToLower());
-        if (Distance == 0)
-            Weight = 10 * SelfWeight();
-        else if (Distance < StrLen)
-            Weight = NormalizeDistance((float)Distance, (float)StrLen);
+        NormDistance = NormalizeDistance((float)Distance, (float)StrLen);
     }
 
     private float NormalizeDistance(float distance, float strlen)
