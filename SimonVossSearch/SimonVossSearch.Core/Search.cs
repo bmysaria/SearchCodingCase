@@ -156,13 +156,15 @@ public class Search
     }
 
     var ord = l.OrderByDescending(x => x.Item2);
-    foreach (var x in ord.Take(10))
+    foreach (var x in ord)
     {
         fields[x.Item1].CalculateWeight(x.Item2);
-        Console.WriteLine(fields[x.Item1].Weight + " " + fields[x.Item1].Value);
     }
-
-
+    
+    foreach (var x in fields.OrderByDescending(x=>x.Weight).Take(10))
+    {
+        Console.WriteLine(x.Weight + " " + x.Value);
+    }
     }
 
     public List<Field> GetFields()
