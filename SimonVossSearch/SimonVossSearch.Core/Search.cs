@@ -13,6 +13,7 @@ public class Field
     public float StrLen { get; set; }
     public float Distance { get; set; }
     public float Match { get; set; }
+    public float Weight { get; set; }
     
     public Field(Guid id, string type, string property, string value, string targetString)
     {
@@ -23,6 +24,9 @@ public class Field
         Distance = CalculateDistance(value, targetString);
         StrLen = value.Length;
         Match = 1 - Distance / StrLen;
+        Weight = Distance == 0 ? 10 : 1;
+        if ((int)Distance < (int)StrLen)
+            Weight *= WeightCoef();
     }
     private int CalculateDistance(string src, string str)
     {
@@ -52,7 +56,7 @@ public class Field
     
     }
 
-    /*private int Weight()
+    private int WeightCoef()
     {
         switch (Type)
         {
@@ -71,7 +75,7 @@ public class Field
         }
 
         return 0;
-    }*/
+    }
 }
 
 public static class Search
@@ -82,7 +86,7 @@ public static class Search
 
         foreach (var building in data.Buildings)
         {
-            allFieldsInAllBuildings = allFieldsInAllBuildings.Concat(SearchInObject(building, str, building.Id)).ToList();
+            allFieldsInAllBuildings = allFieldsInAllBuildings.Concat(SearchInObject(building, str, building.Id).OrderByDescending(x=>x.Weight)).ToList();
         }
 
         var res = allFieldsInAllBuildings.Count();
@@ -95,6 +99,8 @@ public static class Search
 
         foreach (var prop in props)
         {
+            if (prop.Name == "Id")
+                continue;
             var field = new Field(id, type.Name, prop.Name, prop.GetValue(obj, null).ToString(), targetString);
             allFieldsInAnObj.Add(field);
         }
