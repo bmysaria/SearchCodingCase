@@ -1,9 +1,9 @@
 namespace SimonVossSearch.Core.Model;
 
-public class Lock
+public class Lock : IEntity
 {
-    public string Id { get; set; }
-    public string BuildingId { get; set; }
+    public Guid Id { get; set; }
+    public Guid BuildingId { get; set; }
     public string Type { get; set; }
     public string Name { get; set; }
     public object Description { get; set; }

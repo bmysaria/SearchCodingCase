@@ -1,6 +1,6 @@
 namespace SimonVossSearch.Core.Model;
 
-public class Building
+public class Building : IEntity
 {
     public Guid Id { get; set; }
     public string ShortCut { get; set; }
