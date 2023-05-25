@@ -1,11 +1,12 @@
 using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace SimonVossSearch.Core.Model;
 
 public class Lock : IEntity
 {
     public Guid Id { get; set; }
-    [JsonPropertyName("BuildingId")]
+    [Newtonsoft.Json.JsonProperty("buildingId")]
     public Guid ParentId { get; set; }
     public string Type { get; set; }
     public string Name { get; set; }

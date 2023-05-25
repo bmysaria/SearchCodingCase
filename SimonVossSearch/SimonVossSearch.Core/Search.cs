@@ -158,7 +158,6 @@ public class Search
         List<IEntity> entities = new List<IEntity>();
         entities = entities.Concat(_data.Buildings).Concat(_data.Locks).Concat(_data.Groups).Concat(_data.Media)
             .ToList();
-        Guid parentId = Guid.Empty;
         foreach (var entity in entities)
         {
             var type = entity.GetType();

@@ -1,11 +1,11 @@
 using System.Text.Json.Serialization;
-
+using Newtonsoft.Json;
 namespace SimonVossSearch.Core.Model;
 
 public class Medium : IEntity
 {
     public Guid Id { get; set; }
-    [JsonPropertyName("GroupId")]
+    [JsonProperty("groupId")]
     public Guid ParentId { get; set; }
     public string Type { get; set; }
     public string Owner { get; set; }

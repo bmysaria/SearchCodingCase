@@ -30,8 +30,7 @@ public class Field
 
     public void CalculateWeight(string parentProperty)
     {
-        double newWeight = ParentWeight(parentProperty);
-        Weight = Math.Max(Weight, newWeight);
+        Weight  = ParentWeight(parentProperty);
     }
 
     private int SelfWeight()
