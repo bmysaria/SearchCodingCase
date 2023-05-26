@@ -3,7 +3,7 @@ namespace SimonVossSearch.Core.Model;
 public class SearchResultDto
 {
     public string Type { get; set; }
-    public Guid Id { get; set; }
+    public Guid ObjectId { get; set; }
     public string MatchedProperty { get; set; }
     public string MatchedValue { get; set; }
 }
@@ -16,7 +16,7 @@ public static class SearchResultDtoMapper
         
         foreach (var field in fields)
         {
-            res.Add(new SearchResultDto(){Type = field.Type, Id = field.Id, MatchedProperty = field.Property,MatchedValue = field.Value});
+            res.Add(new SearchResultDto(){Type = field.Type, ObjectId = field.Id, MatchedProperty = field.Property,MatchedValue = field.Value});
         }
 
         return res;
