@@ -1,4 +1,4 @@
-import { Container, InputAdornment, TextField } from "@mui/material";
+import {Box, Container, Grid, InputAdornment, List, ListItem, TextField} from "@mui/material";
 import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { SearchResult } from "../model/SearchResult";
@@ -12,7 +12,7 @@ const Search =() => {
         console.log(searchTerm);
         try {
             console.log('TRY');
-            const response = await  fetch("https://localhost:7144/api/Search/wc", {
+            const response = await  fetch("https://localhost:7144/api/Search/" + searchTerm, {
                 method: 'get',
                 mode: 'cors',
                 headers: {
@@ -57,6 +57,30 @@ const Search =() => {
                         }}
                     />
                 </Container>
+                <Box
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+
+                >
+                    <List
+                        sx={{
+                            width: '100%',
+                            maxWidth: 360,
+                            bgcolor: 'background.paper',
+                            position: 'relative',
+                            overflow: 'auto',
+                            maxHeight: 300,
+                            '& ul': { padding: 0 },
+                        }}
+                        subheader={<li />}
+                    >
+                {
+                    searchResults != undefined &&
+                    searchResults.map((x) => (<ListItem>{x.matchedValue}</ListItem>))
+                }
+                </List>
+                </Box>
             </div>
         );
     }
