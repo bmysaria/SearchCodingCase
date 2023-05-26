@@ -5,13 +5,14 @@ using SimonVossSearch.Core;
 using SimonVossSearch.Core.Model;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddTransient<ISearchService, SearchService>();
+
+
+builder.Services.AddControllers();
+
 var app = builder.Build();
 
-string path = File.ReadAllText("./data.json");
-var data = JsonConvert.DeserializeObject<DataFile>(path);
+app.MapControllers();
 
-var search = new Search(data, "Head");
-search.Execute();
-
-//app.MapGet("/", () => "Hello World!");
 app.Run();

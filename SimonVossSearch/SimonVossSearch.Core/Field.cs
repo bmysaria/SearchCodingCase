@@ -8,6 +8,7 @@ public class Field
     public string Property { get; set; } // (??)
     public string Value { get; set; }
     public double Weight { get; set; }
+    public double WCoef { get; set; }
     public Field(Guid id, string type, string property, string value, Guid parentId)
     {
         Id = id;
@@ -20,6 +21,7 @@ public class Field
 
     public void CalculateWeight(double w)
     {
+        WCoef = w;
         if ((int)w == 1)
             Weight = w * SelfWeight()*10;
         else if ((int)w > 0.1)
@@ -30,7 +32,7 @@ public class Field
 
     public void CalculateWeight(string parentProperty)
     {
-        Weight  = ParentWeight(parentProperty);
+        Weight  = ParentWeight(parentProperty) * WCoef;
     }
 
     private int SelfWeight()
@@ -98,18 +100,16 @@ public class Field
 
     private int ParentWeight(string parentProperty)
     {
-        int weight=0;
         switch (Type)
         {
             case "Lock" :
                 switch (parentProperty)
                 {
                     case "Name":
-                        weight += 8;
+                        return 8;
                         break;
                     case "ShortCut":
-                        weight += 5;
-                        break;
+                        return 5;
                 }
                 ;
                 break;
@@ -117,13 +117,12 @@ public class Field
                 switch (parentProperty)
                 {
                     case "Name":
-                        weight += 8;
-                        break;
+                        return 8;
                 }
                 ;
                 break;
                 
         }
-        return weight;
+        return 0;
     }
 }
