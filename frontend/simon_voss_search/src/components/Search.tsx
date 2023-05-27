@@ -1,4 +1,4 @@
-import {Box, Container, Grid, InputAdornment, List, ListItem, TextField} from "@mui/material";
+import {Box, Container, Grid, InputAdornment, List, ListItem, styled, TextField} from "@mui/material";
 import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { SearchResult } from "../model/SearchResult";
@@ -32,6 +32,7 @@ const Search =() => {
             console.log(error);
         }
     }
+
     // @ts-ignore
     const handleChange = (event) => {
         setSearchTerm(event.target.value);
@@ -45,11 +46,13 @@ const Search =() => {
                         id="search"
                         type="search"
                         label="Search"
+                        variant="filled"
                         value={searchTerm}
                         onChange={handleChange}
-                        sx={{width: 700, background: 'rgba(87, 91, 99, 0.5)'}}
-
+                        sx={{width: 700, background: 'rgba(255,255,255,0.6)'}}
                         InputProps={{
+                            sx: {
+                                color: '#01579b'},
                             endAdornment: (
                                 <InputAdornment position="end">
                                     <SearchIcon/>
@@ -64,25 +67,28 @@ const Search =() => {
                     alignItems="center"
 
                 >
+                    {
+                        searchResults != undefined && searchTerm != '' &&
                     <List
                         sx={{
                             width: '100%',
                             maxWidth: 700,
-                            bgcolor: 'background.paper',
+                            color:'#01579b',
                             position: 'relative',
                             overflow: 'auto',
                             maxHeight: 300,
-                            background: 'rgba(87, 91, 99, 0.5)',
+                            background: 'rgba(255,255,255,0.6)',
 
                             '& ul': { padding: 0 },
                         }}
                         subheader={<li />}
                     >
                 {
-                    searchResults != undefined && searchTerm != '' &&
+                    // searchResults != undefined && searchTerm != '' &&
                     searchResults.map((x) => (<ListItem>{x.matchedValue}</ListItem>))
                 }
                 </List>
+                    }
                 </Box>
             </div>
         );
