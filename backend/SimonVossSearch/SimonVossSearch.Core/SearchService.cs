@@ -151,13 +151,8 @@ public class SearchService : ISearchService
             fields[x.Item1].CalculateWeight(x.Item2);
         }
 
-        var res = fields.OrderByDescending(x => x.Weight).Take(10);
-
-        foreach (var x in res)
-        {
-            Console.WriteLine(x.Weight + " " + x.Value);
-        }
-
+        var res = fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
+        
         return SearchResultDtoMapper.Map(res.ToList());
     }
 

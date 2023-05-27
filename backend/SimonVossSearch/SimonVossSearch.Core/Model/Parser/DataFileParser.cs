@@ -22,7 +22,7 @@ public class DataFileParser
             IList<PropertyInfo> props = new List<PropertyInfo>(type.GetProperties());
             foreach (var prop in props)
             {
-                if (prop.Name == "Id" || prop.Name == "BuildingId" || prop.Name == "GroupId" || prop.Name == "Mediums" || prop.Name == "Locks")
+                if (prop.Name == "Id" || prop.Name == "BuildingId" || prop.Name == "GroupId" || prop.Name == "Mediums" || prop.Name == "Locks" || prop.Name == "ParentId")
                     continue;
                 var value = prop.GetValue(entity, null) == null ? "" : prop.GetValue(entity, null).ToString().ToLower();
                 if (string.IsNullOrEmpty(value))
