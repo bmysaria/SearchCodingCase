@@ -47,7 +47,8 @@ const Search =() => {
                         label="Search"
                         value={searchTerm}
                         onChange={handleChange}
-                        sx={{width: 600}}
+                        sx={{width: 700, background: 'rgba(87, 91, 99, 0.5)'}}
+
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">
@@ -66,17 +67,19 @@ const Search =() => {
                     <List
                         sx={{
                             width: '100%',
-                            maxWidth: 360,
+                            maxWidth: 700,
                             bgcolor: 'background.paper',
                             position: 'relative',
                             overflow: 'auto',
                             maxHeight: 300,
+                            background: 'rgba(87, 91, 99, 0.5)',
+
                             '& ul': { padding: 0 },
                         }}
                         subheader={<li />}
                     >
                 {
-                    searchResults != undefined &&
+                    searchResults != undefined && searchTerm != '' &&
                     searchResults.map((x) => (<ListItem>{x.matchedValue}</ListItem>))
                 }
                 </List>
