@@ -2,6 +2,9 @@
 using System.Runtime.InteropServices.ComTypes;
 using Newtonsoft.Json;
 using SimonVossSearch.Core.Model;
+using SimonVossSearch.Core.Model.Mapper;
+using SimonVossSearch.Core.Model.Parser;
+
 namespace SimonVossSearch.Core;
 using System;
 using System.Collections.Generic;
@@ -12,19 +15,12 @@ public interface ISearchService
     public List<SearchResultDto> Execute(string targetString);
 }
 public class SearchService : ISearchService
-{
-    private DataFile _data;
-
-    public SearchService()
-    {
-        string path = File.ReadAllText("./data.json");
-        _data = JsonConvert.DeserializeObject<DataFile>(path);
-    }
-
+{ 
     public List<SearchResultDto> Execute(string targetString)
     {
 
-        var fields = GetFields();
+        var parser = new DataFileParser();
+        var fields = parser.Execute();
 
         var ngram = targetString.Length < 3 ? 2 : 3;
 
@@ -165,28 +161,5 @@ public class SearchService : ISearchService
         return SearchResultDtoMapper.Map(res.ToList());
     }
 
-    public List<Field> GetFields()
-    { List<Field> fields = new List<Field>(); 
-        List<IEntity> entities = new List<IEntity>();
-        entities = entities.Concat(_data.Buildings).Concat(_data.Locks).Concat(_data.Groups).Concat(_data.Media)
-            .ToList();
-        foreach (var entity in entities)
-        {
-            var type = entity.GetType();
-            IList<PropertyInfo> props = new List<PropertyInfo>(type.GetProperties());
-            foreach (var prop in props)
-            {
-                if (prop.Name == "Id" || prop.Name == "BuildingId" || prop.Name == "GroupId" || prop.Name == "Mediums" || prop.Name == "Locks")
-                    continue;
-                var value = prop.GetValue(entity, null) == null ? "" : prop.GetValue(entity, null).ToString().ToLower();
-                if (string.IsNullOrEmpty(value))
-                    continue;
-                var field = new Field(entity.Id, type.Name, prop.Name, value, entity.ParentId);
-                fields.Add(field);
-            }
-        }
-
-        return fields;
-
-    }
+    
 }
