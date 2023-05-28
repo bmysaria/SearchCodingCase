@@ -90,7 +90,6 @@ const Search =() => {
                 {
                     // searchResults != undefined && searchTerm != '' &&
                     searchResults.map((x) => (<ListItem>
-
                         {x.matchedValue}
                         {x.type == 'Building' && <ApartmentSharpIcon/>}
                         {x.type == 'Lock' && <LockSharpIcon/>}
