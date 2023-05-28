@@ -24,15 +24,13 @@ public class Field
         WCoef = w;
         if ((int)w == 1)
             Weight = w * SelfWeight()*10;
-        else if ((int)w > 0.1)
-            Weight = w * SelfWeight();
         else
-            Weight = w;
+            Weight = w * SelfWeight();
     }
 
-    public void CalculateWeight(string parentProperty)
+    public void CalculateWeight(string parentProperty, double parentCoef)
     {
-        Weight  = ParentWeight(parentProperty) * WCoef;
+        Weight = ParentWeight(parentProperty) * parentCoef;
     }
 
     private int SelfWeight()

@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Collections.Concurrent;
+using System.Reflection;
 using System.Runtime.InteropServices.ComTypes;
 using Newtonsoft.Json;
 using SimonVossSearch.Core.Model;
@@ -152,6 +153,29 @@ public class SearchService : ISearchService
         }
 
         var res = fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
+
+        Dictionary<Guid, Tuple<string, double>> maxValues = new Dictionary<Guid, Tuple<string, double>>();
+
+        var parents = res.Where(x => x.ParentId == Guid.Empty).OrderBy(x => x.Weight);
+        foreach (var field in parents)
+        {
+            if (!maxValues.ContainsKey(field.Id))
+                maxValues.TryAdd(field.Id, Tuple.Create(field.Property, field.WCoef));
+            else
+                maxValues[field.Id] = Tuple.Create(field.Property, field.WCoef);
+        }
+        
+        
+        foreach (var parentMaxValue in maxValues)
+        {
+            foreach (var child in fields)
+            {
+                if(child.ParentId == parentMaxValue.Key)
+                    child.CalculateWeight(parentMaxValue.Value.Item1, parentMaxValue.Value.Item2);
+            }
+        }
+        
+        res = fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
         
         return SearchResultDtoMapper.Map(res.ToList());
     }
