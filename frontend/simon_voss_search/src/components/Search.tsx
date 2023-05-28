@@ -90,12 +90,12 @@ const Search =() => {
                 {
                     // searchResults != undefined && searchTerm != '' &&
                     searchResults.map((x) => (<ListItem>
-                        {x.matchedValue}
+
                         {x.type == 'Building' && <ApartmentSharpIcon/>}
                         {x.type == 'Lock' && <LockSharpIcon/>}
                         {x.type == 'Group' && <GroupSharpIcon/>}
                         {x.type == 'Medium' && <Person2SharpIcon/>}
-                        ({x.matchedProperty.toLowerCase()})
+                        {x.matchedValue}
                     </ListItem>))
                 }
                 </List>

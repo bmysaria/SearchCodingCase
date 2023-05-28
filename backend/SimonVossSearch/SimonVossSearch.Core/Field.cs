@@ -105,7 +105,6 @@ public class Field
                 {
                     case "Name":
                         return 8;
-                        break;
                     case "ShortCut":
                         return 5;
                 }

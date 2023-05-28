@@ -152,11 +152,11 @@ public class SearchService : ISearchService
             fields[x.Item1].CalculateWeight(x.Item2);
         }
 
-        var res = fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
+        var primaryRes = fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
 
         Dictionary<Guid, Tuple<string, double>> maxValues = new Dictionary<Guid, Tuple<string, double>>();
 
-        var parents = res.Where(x => x.ParentId == Guid.Empty).OrderBy(x => x.Weight);
+        var parents = primaryRes.Where(x => x.ParentId == Guid.Empty).OrderBy(x => x.Weight);
         foreach (var field in parents)
         {
             if (!maxValues.ContainsKey(field.Id))
@@ -175,9 +175,9 @@ public class SearchService : ISearchService
             }
         }
         
-        res = fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
+        primaryRes = fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
         
-        return SearchResultDtoMapper.Map(res.ToList());
+        return SearchResultDtoMapper.Map(primaryRes.ToList());
     }
 
     
