@@ -170,7 +170,7 @@ public class SearchService : ISearchService
         {
             foreach (var child in fields)
             {
-                if(child.ParentId == parentMaxValue.Key)
+                if(child.ParentId == parentMaxValue.Key && (child.Property=="Name" || child.Property=="Owner"))
                     child.CalculateWeight(parentMaxValue.Value.Item1, parentMaxValue.Value.Item2);
             }
         }

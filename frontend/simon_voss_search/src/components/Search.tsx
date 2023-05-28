@@ -2,6 +2,10 @@ import {Box, Container, Grid, InputAdornment, List, ListItem, styled, TextField}
 import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { SearchResult } from "../model/SearchResult";
+import ApartmentSharpIcon from '@mui/icons-material/ApartmentSharp';
+import LockSharpIcon from '@mui/icons-material/LockSharp';
+import GroupSharpIcon from '@mui/icons-material/GroupSharp';
+import Person2SharpIcon from '@mui/icons-material/Person2Sharp';
 
 const Search =() => {
 
@@ -85,7 +89,15 @@ const Search =() => {
                     >
                 {
                     // searchResults != undefined && searchTerm != '' &&
-                    searchResults.map((x) => (<ListItem>{x.matchedValue}</ListItem>))
+                    searchResults.map((x) => (<ListItem>
+
+                        {x.matchedValue}
+                        {x.type == 'Building' && <ApartmentSharpIcon/>}
+                        {x.type == 'Lock' && <LockSharpIcon/>}
+                        {x.type == 'Group' && <GroupSharpIcon/>}
+                        {x.type == 'Medium' && <Person2SharpIcon/>}
+                        ({x.matchedProperty.toLowerCase()})
+                    </ListItem>))
                 }
                 </List>
                     }
