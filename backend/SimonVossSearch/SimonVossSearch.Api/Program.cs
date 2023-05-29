@@ -6,6 +6,7 @@ using SimonVossSearch.Core.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<TfidfVectorizer>();
 builder.Services.AddTransient<ISearchService, SearchService>();
 
 

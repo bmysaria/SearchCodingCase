@@ -16,88 +16,15 @@ public interface ISearchService
     public List<SearchResultDto> Execute(string targetString);
 }
 public class SearchService : ISearchService
-{ 
+{
+    private readonly TfidfVectorizer _vectorizer;
+    public SearchService(TfidfVectorizer vectorizer)
+    {
+        _vectorizer = vectorizer;
+    }
     public List<SearchResultDto> Execute(string targetString)
     {
-
-        var parser = new DataFileParser();
-        var fields = parser.Execute();
-
-        var ngram = targetString.Length < 3 ? 2 : 3;
-
-        var terms = new HashSet<string>();
-        var docFreq = new List<Dictionary<string, int>>();
-        foreach (var field in fields)
-        {
-            Dictionary<string, int> docTerms = new Dictionary<string, int>();
-            for (int i = 0; i < field.Value.Length - (ngram - 1); i++)
-            {
-                var term = field.Value.Substring(i, ngram);
-                terms.Add(term);
-                if (docTerms.TryGetValue(term, out var val))
-                {
-                    docTerms[term] += val + 1;
-                }
-                else
-                {
-                    docTerms[term] = 1;
-                }
-            }
-
-            docFreq.Add(docTerms);
-        }
-
-        var tf = new double[docFreq.Count][];
-        for (int i = 0; i < docFreq.Count; i++)
-        {
-            var docTf = docFreq[i];
-            tf[i] = new double[terms.Count];
-            var index = 0;
-            foreach (var term in terms)
-            {
-                if (docTf.TryGetValue(term, out var val))
-                {
-                    tf[i][index] = val;
-                }
-
-                index++;
-            }
-        }
-
-        var idf = new double[terms.Count];
-        var idfIndex = 0;
-        foreach (var t in terms)
-        {
-            var docsCount = 0;
-            foreach (var docF in docFreq)
-            {
-                if (docF.ContainsKey(t))
-                {
-                    docsCount++;
-                }
-            }
-
-            idf[idfIndex] = Math.Log((fields.Count + 1) / (double)(docsCount + 1)) + 1;
-            idfIndex++;
-        }
-
-        for (int i = 0; i < fields.Count; i++)
-        {
-            var totalSum = 0d;
-            for (int j = 0; j < terms.Count; j++)
-            {
-                tf[i][j] *= idf[j];
-                totalSum += tf[i][j] * tf[i][j];
-            }
-
-            var normal = Math.Sqrt(1 / totalSum);
-            for (int j = 0; j < terms.Count; j++)
-            {
-                tf[i][j] *= normal;
-            }
-        }
-
-
+        var ngram = 2;
         Dictionary<string, int> wordTerms = new Dictionary<string, int>();
         for (int i = 0; i < targetString.Length - (ngram - 1); i++)
         {
@@ -112,15 +39,15 @@ public class SearchService : ISearchService
             }
         }
 
-        var wordVector = new double[terms.Count];
+        var wordVector = new double[_vectorizer.Terms.Count];
         var wordSum = 0d;
         var wordIndex = 0;
         var wordTotalSum = 0d;
-        foreach (var term in terms)
+        foreach (var term in _vectorizer.Terms)
         {
             if (wordTerms.ContainsKey(term))
             {
-                wordVector[wordIndex] = wordTerms[term] * idf[wordIndex];
+                wordVector[wordIndex] = wordTerms[term] * _vectorizer.idf[wordIndex];
                 wordTotalSum += wordVector[wordIndex] * wordVector[wordIndex];
             }
 
@@ -131,7 +58,7 @@ public class SearchService : ISearchService
         {
             var normal = Math.Sqrt(1 / wordTotalSum);
 
-            for (int j = 0; j < terms.Count; j++)
+            for (int j = 0; j < _vectorizer.Terms.Count; j++)
             {
                 wordVector[j] *= normal;
             }
@@ -139,9 +66,9 @@ public class SearchService : ISearchService
 
 
         var l = new List<Tuple<int, double>>();
-        for (int i = 0; i < fields.Count; i++)
+        for (int i = 0; i < _vectorizer.Fields.Count; i++)
         {
-            var v1 = tf[i];
+            var v1 = _vectorizer.tf[i];
             var prod = v1.Zip(wordVector, (a, b) => a * b).Sum();
             l.Add(Tuple.Create(i, prod));
         }
@@ -149,10 +76,10 @@ public class SearchService : ISearchService
         var ord = l.OrderByDescending(x => x.Item2);
         foreach (var x in ord)
         {
-            fields[x.Item1].CalculateWeight(x.Item2);
+            _vectorizer.Fields[x.Item1].CalculateWeight(x.Item2);
         }
 
-        var primaryRes = fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
+        var primaryRes = _vectorizer.Fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
 
         Dictionary<Guid, Tuple<string, double>> maxValues = new Dictionary<Guid, Tuple<string, double>>();
 
@@ -168,14 +95,14 @@ public class SearchService : ISearchService
         
         foreach (var parentMaxValue in maxValues)
         {
-            foreach (var child in fields)
+            foreach (var child in _vectorizer.Fields)
             {
                 if(child.ParentId == parentMaxValue.Key && (child.Property=="Name" || child.Property=="Owner"))
                     child.CalculateWeight(parentMaxValue.Value.Item1, parentMaxValue.Value.Item2);
             }
         }
         
-        primaryRes = fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
+        primaryRes = _vectorizer.Fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
         
         return SearchResultDtoMapper.Map(primaryRes.ToList());
     }
