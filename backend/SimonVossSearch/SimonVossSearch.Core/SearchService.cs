@@ -26,9 +26,10 @@ public class SearchService : ISearchService
     {
         var ngram = 2;
         Dictionary<string, int> wordTerms = new Dictionary<string, int>();
+        
         for (int i = 0; i < targetString.Length - (ngram - 1); i++)
         {
-            var term = targetString.Substring(i, ngram); // ignore case ??
+            var term = targetString.Substring(i, ngram);
             if (wordTerms.TryGetValue(term, out var val))
             {
                 wordTerms[term] += val + 1;
@@ -43,6 +44,7 @@ public class SearchService : ISearchService
         var wordSum = 0d;
         var wordIndex = 0;
         var wordTotalSum = 0d;
+        
         foreach (var term in _vectorizer.Terms)
         {
             if (wordTerms.ContainsKey(term))
@@ -63,9 +65,9 @@ public class SearchService : ISearchService
                 wordVector[j] *= normal;
             }
         }
-
-
+        
         var l = new List<Tuple<int, double>>();
+        
         for (int i = 0; i < _vectorizer.Fields.Count; i++)
         {
             var v1 = _vectorizer.tf[i];
@@ -73,17 +75,27 @@ public class SearchService : ISearchService
             l.Add(Tuple.Create(i, prod));
         }
 
+        return CalculateWeight(l);
+    }
+
+    private List<SearchResultDto> CalculateWeight(List<Tuple<int, double>> l)
+    {
+        // calculate self-weight
         var ord = l.OrderByDescending(x => x.Item2);
+        
         foreach (var x in ord)
         {
             _vectorizer.Fields[x.Item1].CalculateWeight(x.Item2);
         }
 
         var primaryRes = _vectorizer.Fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
-
+        
         Dictionary<Guid, Tuple<string, double>> maxValues = new Dictionary<Guid, Tuple<string, double>>();
 
+        // find parents 
+        
         var parents = primaryRes.Where(x => x.ParentId == Guid.Empty).OrderBy(x => x.Weight);
+        
         foreach (var field in parents)
         {
             if (!maxValues.ContainsKey(field.Id))
@@ -92,6 +104,7 @@ public class SearchService : ISearchService
                 maxValues[field.Id] = Tuple.Create(field.Property, field.WCoef);
         }
         
+        // give weight to children
         
         foreach (var parentMaxValue in maxValues)
         {
@@ -105,11 +118,6 @@ public class SearchService : ISearchService
         primaryRes = _vectorizer.Fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
         
         return SearchResultDtoMapper.Map(primaryRes.ToList());
-    }
-
-    private void CalculateWeight( IOrderedEnumerable<Field>? primaryRes)
-    {
-        
     }
     
 }
