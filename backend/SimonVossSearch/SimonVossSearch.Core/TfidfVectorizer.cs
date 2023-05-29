@@ -9,18 +9,23 @@ public class TfidfVectorizer
     public double[][] tf;
     public double[] idf;
 
+    private int ngram = 2;
     public TfidfVectorizer()
-    {
-        Execute();
-    }
-    public void Execute()
     {
         var parser = new DataFileParser();
         Fields = parser.Execute();
+        Vectorize();
+    }
+    public void Vectorize()
+    {
+        var docFreq = FindDocFreq();
+        FindTf(docFreq);
+        FindIdf(docFreq);
+        Normalize();
+    }
 
-        var ngram = 2;
-
-        
+    private List<Dictionary<string, int>> FindDocFreq()
+    {
         var docFreq = new List<Dictionary<string, int>>();
         foreach (var field in Fields)
         {
@@ -42,6 +47,11 @@ public class TfidfVectorizer
             docFreq.Add(docTerms);
         }
 
+        return docFreq;
+    }
+
+    private void FindTf(List<Dictionary<string, int>> docFreq)
+    {
         tf = new double[docFreq.Count][];
         for (int i = 0; i < docFreq.Count; i++)
         {
@@ -58,7 +68,10 @@ public class TfidfVectorizer
                 index++;
             }
         }
+    }
 
+    private void FindIdf(List<Dictionary<string, int>> docFreq)
+    {
         idf = new double[Terms.Count];
         var idfIndex = 0;
         foreach (var t in Terms)
@@ -75,7 +88,10 @@ public class TfidfVectorizer
             idf[idfIndex] = Math.Log((Fields.Count + 1) / (double)(docsCount + 1)) + 1;
             idfIndex++;
         }
+    }
 
+    private void Normalize()
+    {
         for (int i = 0; i < Fields.Count; i++)
         {
             var totalSum = 0d;
@@ -91,6 +107,5 @@ public class TfidfVectorizer
                 tf[i][j] *= normal;
             }
         }
-        
     }
 }
