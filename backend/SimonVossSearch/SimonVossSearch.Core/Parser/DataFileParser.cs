@@ -1,7 +1,9 @@
 using System.Reflection;
 using Newtonsoft.Json;
+using SimonVossSearch.Core.Model;
+using SimonVossSearch.Core.Model.Entities;
 
-namespace SimonVossSearch.Core.Model.Parser;
+namespace SimonVossSearch.Core.Parser;
 
 public class DataFileParser
 {
@@ -11,7 +13,7 @@ public class DataFileParser
         string path = File.ReadAllText("./data.json");
         _data = JsonConvert.DeserializeObject<DataFile>(path);
     }
-    public List<Field> Execute()
+    public List<Field> GetFields()
     { List<Field> fields = new List<Field>(); 
         List<IEntity> entities = new List<IEntity>();
         entities = entities.Concat(_data.Buildings).Concat(_data.Locks).Concat(_data.Groups).Concat(_data.Media)

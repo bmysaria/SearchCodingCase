@@ -1,4 +1,6 @@
-namespace SimonVossSearch.Core.Model.Mapper;
+using SimonVossSearch.Core.Model;
+
+namespace SimonVossSearch.Core.Mapper;
 
 public static class SearchResultDtoMapper
 {

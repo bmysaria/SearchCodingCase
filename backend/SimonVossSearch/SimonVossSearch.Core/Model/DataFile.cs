@@ -1,3 +1,5 @@
+using SimonVossSearch.Core.Model.Entities;
+
 namespace SimonVossSearch.Core.Model;
 
 public class DataFile

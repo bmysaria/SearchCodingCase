@@ -1,4 +1,4 @@
-namespace SimonVossSearch.Core.Model;
+namespace SimonVossSearch.Core.Model.Entities;
 
 public class Group : IEntity
 {

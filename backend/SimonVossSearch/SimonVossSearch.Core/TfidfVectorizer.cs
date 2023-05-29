@@ -1,4 +1,4 @@
-using SimonVossSearch.Core.Model.Parser;
+using SimonVossSearch.Core.Parser;
 
 namespace SimonVossSearch.Core;
 
@@ -13,10 +13,10 @@ public class TfidfVectorizer
     public TfidfVectorizer()
     {
         var parser = new DataFileParser();
-        Fields = parser.Execute();
-        Vectorize();
+        Fields = parser.GetFields();
+        Execute();
     }
-    public void Vectorize()
+    public void Execute()
     {
         var docFreq = FindDocFreq();
         FindTf(docFreq);

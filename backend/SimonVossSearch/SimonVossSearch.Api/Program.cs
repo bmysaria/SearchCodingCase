@@ -6,7 +6,7 @@ using SimonVossSearch.Core.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<TfidfVectorizer>();
+builder.Services.AddScoped<TfidfVectorizer>(); // the idea is to reuse the matrix for better calculations in the SearchService
 builder.Services.AddTransient<ISearchService, SearchService>();
 
 

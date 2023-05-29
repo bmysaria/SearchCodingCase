@@ -2,9 +2,8 @@
 using System.Reflection;
 using System.Runtime.InteropServices.ComTypes;
 using Newtonsoft.Json;
+using SimonVossSearch.Core.Mapper;
 using SimonVossSearch.Core.Model;
-using SimonVossSearch.Core.Model.Mapper;
-using SimonVossSearch.Core.Model.Parser;
 
 namespace SimonVossSearch.Core;
 using System;

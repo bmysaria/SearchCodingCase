@@ -1,7 +1,4 @@
-using System.Text.Json.Serialization;
-using Newtonsoft.Json;
-
-namespace SimonVossSearch.Core.Model;
+namespace SimonVossSearch.Core.Model.Entities;
 
 public class Lock : IEntity
 {
