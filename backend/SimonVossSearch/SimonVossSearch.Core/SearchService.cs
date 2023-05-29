@@ -24,22 +24,9 @@ public class SearchService : ISearchService
     }
     public List<SearchResultDto> Execute(string targetString)
     {
-       
-        Dictionary<string, int> wordTerms = new Dictionary<string, int>();
-        
-        for (int i = 0; i < targetString.Length - (ngram - 1); i++)
-        {
-            var term = targetString.Substring(i, ngram);
-            if (wordTerms.TryGetValue(term, out var val))
-            {
-                wordTerms[term] += val + 1;
-            }
-            else
-            {
-                wordTerms[term] = 1;
-            }
-        }
 
+        var wordTerms = FindWordTermsInTargetString(targetString);
+        
         var wordVector = new double[_vectorizer.Terms.Count];
         var wordSum = 0d;
         var wordIndex = 0;
@@ -52,9 +39,7 @@ public class SearchService : ISearchService
                 wordVector[wordIndex] = wordTerms[term] * _vectorizer.idf[wordIndex];
                 wordTotalSum += wordVector[wordIndex] * wordVector[wordIndex];
             }
-
             wordIndex++;
-
         }
         
         var normal = Math.Sqrt(1 / wordTotalSum);
@@ -76,6 +61,25 @@ public class SearchService : ISearchService
         return CalculateWeight(l);
     }
 
+    private Dictionary<string, int>  FindWordTermsInTargetString(string targetString)
+    {
+        Dictionary<string, int> wordTerms = new Dictionary<string, int>();
+        
+        for (int i = 0; i < targetString.Length - (ngram - 1); i++)
+        {
+            var term = targetString.Substring(i, ngram);
+            if (wordTerms.TryGetValue(term, out var val))
+            {
+                wordTerms[term] += val + 1;
+            }
+            else
+            {
+                wordTerms[term] = 1;
+            }
+        }
+
+        return wordTerms;
+    }
     private List<SearchResultDto> CalculateWeight(List<Tuple<int, double>> l)
     {
         // calculate self-weight
