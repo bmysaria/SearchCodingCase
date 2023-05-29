@@ -107,5 +107,9 @@ public class SearchService : ISearchService
         return SearchResultDtoMapper.Map(primaryRes.ToList());
     }
 
+    private void CalculateWeight( IOrderedEnumerable<Field>? primaryRes)
+    {
+        
+    }
     
 }

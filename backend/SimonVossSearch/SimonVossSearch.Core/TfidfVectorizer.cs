@@ -50,7 +50,7 @@ public class TfidfVectorizer
         return docFreq;
     }
 
-    private void FindTf(List<Dictionary<string, int>> docFreq)
+    private void FindTf(List<Dictionary<string, int>> docFreq) //Term Frequency
     {
         tf = new double[docFreq.Count][];
         for (int i = 0; i < docFreq.Count; i++)
@@ -70,7 +70,7 @@ public class TfidfVectorizer
         }
     }
 
-    private void FindIdf(List<Dictionary<string, int>> docFreq)
+    private void FindIdf(List<Dictionary<string, int>> docFreq) // The normal Inverse Document Frequency (IDF) 
     {
         idf = new double[Terms.Count];
         var idfIndex = 0;
