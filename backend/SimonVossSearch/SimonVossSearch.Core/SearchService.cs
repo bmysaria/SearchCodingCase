@@ -83,19 +83,14 @@ public class SearchService : ISearchService
     private List<SearchResultDto> CalculateWeight(List<Tuple<int, double>> l)
     {
         // calculate self-weight
-        var ord = l.OrderByDescending(x => x.Item2);
-        
-        foreach (var x in ord)
+        foreach (var x in l.OrderByDescending(x => x.Item2))
         {
             _vectorizer.Fields[x.Item1].CalculateWeight(x.Item2);
         }
-
         var primaryRes = _vectorizer.Fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
-        
-        Dictionary<Guid, Tuple<string, double>> maxValues = new Dictionary<Guid, Tuple<string, double>>();
 
         // find parents 
-        
+        Dictionary<Guid, Tuple<string, double>> maxValues = new Dictionary<Guid, Tuple<string, double>>();
         var parents = primaryRes.Where(x => x.ParentId == Guid.Empty).OrderBy(x => x.Weight);
         
         foreach (var field in parents)
@@ -107,7 +102,6 @@ public class SearchService : ISearchService
         }
         
         // give weight to children 
-        
         foreach (var parentMaxValue in maxValues)
         {
             foreach (var child in _vectorizer.Fields)
@@ -116,10 +110,8 @@ public class SearchService : ISearchService
                     child.CalculateWeight(parentMaxValue.Value.Item1, parentMaxValue.Value.Item2);
             }
         }
-        
-        primaryRes = _vectorizer.Fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight);
-        
-        return SearchResultDtoMapper.Map(primaryRes.ToList());
+
+        return SearchResultDtoMapper.Map(_vectorizer.Fields.Where(x=>x.Weight>0).OrderByDescending(x => x.Weight).ToList());
     }
     
 }

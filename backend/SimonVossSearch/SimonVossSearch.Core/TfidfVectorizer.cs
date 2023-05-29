@@ -8,22 +8,17 @@ public class TfidfVectorizer
     public HashSet<string> Terms = new HashSet<string>();
     public double[][] tf;
     public double[] idf;
-
     private int ngram = 2;
+    
     public TfidfVectorizer()
     {
         var parser = new DataFileParser();
         Fields = parser.GetFields();
-        Execute();
-    }
-    public void Execute()
-    {
         var docFreq = FindDocFreq();
         FindTf(docFreq);
         FindIdf(docFreq);
         Normalize();
     }
-
     private List<Dictionary<string, int>> FindDocFreq()
     {
         var docFreq = new List<Dictionary<string, int>>();
