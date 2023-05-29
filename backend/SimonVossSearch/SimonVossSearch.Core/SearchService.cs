@@ -17,13 +17,14 @@ public interface ISearchService
 public class SearchService : ISearchService
 {
     private readonly TfidfVectorizer _vectorizer;
+    private int ngram = 2;
     public SearchService(TfidfVectorizer vectorizer)
     {
         _vectorizer = vectorizer;
     }
     public List<SearchResultDto> Execute(string targetString)
     {
-        var ngram = 2;
+       
         Dictionary<string, int> wordTerms = new Dictionary<string, int>();
         
         for (int i = 0; i < targetString.Length - (ngram - 1); i++)
@@ -55,14 +56,12 @@ public class SearchService : ISearchService
             wordIndex++;
 
         }
+        
+        var normal = Math.Sqrt(1 / wordTotalSum);
 
+        for (int j = 0; j < _vectorizer.Terms.Count; j++)
         {
-            var normal = Math.Sqrt(1 / wordTotalSum);
-
-            for (int j = 0; j < _vectorizer.Terms.Count; j++)
-            {
-                wordVector[j] *= normal;
-            }
+            wordVector[j] *= normal;
         }
         
         var l = new List<Tuple<int, double>>();
@@ -103,7 +102,7 @@ public class SearchService : ISearchService
                 maxValues[field.Id] = Tuple.Create(field.Property, field.WCoef);
         }
         
-        // give weight to children
+        // give weight to children 
         
         foreach (var parentMaxValue in maxValues)
         {
