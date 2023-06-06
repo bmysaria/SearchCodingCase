@@ -1,4 +1,5 @@
 using SimonVossSearch.Core.Model.Entities;
+using SimonVossSearch.Domain;
 
 namespace SimonVossSearch.Core.Model;
 

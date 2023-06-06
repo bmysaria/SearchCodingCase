@@ -1,7 +1,7 @@
 using System.Reflection;
 using Newtonsoft.Json;
-using SimonVossSearch.Core.Model;
-using SimonVossSearch.Core.Model.Entities;
+using Persistence.Model;
+using SimonVossSearch.Domain;
 
 namespace SimonVossSearch.Core.Parser;
 

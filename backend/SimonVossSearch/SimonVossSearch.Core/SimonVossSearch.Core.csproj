@@ -10,4 +10,9 @@
       <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\SimonVossSearch.Domain\SimonVossSearch.Domain.csproj" />
+      <ProjectReference Include="..\SimonVossSearch.Persistence\SimonVossSearch.Persistence.csproj" />
+    </ItemGroup>
+
 </Project>
