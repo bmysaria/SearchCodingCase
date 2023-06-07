@@ -11,8 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<SearchDbContext>(options =>
     options.UseNpgsql("User ID=postgres;Password=postgrespw;Host=localhost;Port=5432;Database=mydb;"));
-builder.Services.AddSingleton<TfidfVectorizer>(); // the idea is to reuse the matrix for better calculations in the SearchService/this calculated data can be cached 
-builder.Services.AddTransient<ISearchService, SearchService>();
+builder.Services.AddScoped<IDataFileParser, DataFileParser>();
+builder.Services.AddScoped<ISearchService, SearchService>();
 builder.Services.AddScoped<IDbInitializer, DbInitializer>(); 
 
 
@@ -24,6 +24,7 @@ var app = builder.Build();
 app.MapControllers();
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000"));
 SeedDatabase();
+
 app.Run();
 
 void SeedDatabase()

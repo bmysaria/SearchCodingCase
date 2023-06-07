@@ -4,6 +4,7 @@ using System.Runtime.InteropServices.ComTypes;
 using Newtonsoft.Json;
 using SimonVossSearch.Core.Mapper;
 using SimonVossSearch.Core.Model;
+using SimonVossSearch.Core.Parser;
 using SimonVossSearch.Core.Vectorizer;
 
 namespace SimonVossSearch.Core;
@@ -19,9 +20,9 @@ public class SearchService : ISearchService
 {
     private readonly TfidfVectorizer _vectorizer;
     private int ngram = 2;
-    public SearchService()
+    public SearchService(IDataFileParser parser)
     {
-        _vectorizer = TfidfMemoryCache.GetOrCreate("vectorizer");
+        _vectorizer = TfidfMemoryCache.GetOrCreate("vectorizer", parser);
     }
     public List<SearchResultDto> Execute(string targetString)
     {

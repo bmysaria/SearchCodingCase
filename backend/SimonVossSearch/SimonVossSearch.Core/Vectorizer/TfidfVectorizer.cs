@@ -9,11 +9,13 @@ public class TfidfVectorizer
     public double[][] tf;
     public double[] idf;
     private int ngram = 2;
+
+    private readonly IDataFileParser _parser;
     
-    public TfidfVectorizer()
+    public TfidfVectorizer(IDataFileParser parser)
     {
-        var parser = new DataFileParser();
-        Fields = parser.GetFields();
+        _parser = parser;
+        Fields = _parser.GetFields();
         var docFreq = FindDocFreq();
         FindTf(docFreq);
         FindIdf(docFreq);

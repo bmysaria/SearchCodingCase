@@ -1,22 +1,26 @@
 using System.Reflection;
 using Newtonsoft.Json;
+using Persistence;
 using Persistence.Model;
 using SimonVossSearch.Domain;
 
 namespace SimonVossSearch.Core.Parser;
 
-public class DataFileParser
+public interface IDataFileParser
 {
-    private readonly DataFile _data;
-    public DataFileParser()
+    public List<Field> GetFields();
+}
+public class DataFileParser : IDataFileParser
+{
+    private readonly SearchDbContext _context;
+    public DataFileParser(SearchDbContext context)
     {
-        string path = File.ReadAllText("./data.json");
-        _data = JsonConvert.DeserializeObject<DataFile>(path);
+        _context = context;
     }
     public List<Field> GetFields()
     { List<Field> fields = new List<Field>(); 
         List<IEntity> entities = new List<IEntity>();
-        entities = entities.Concat(_data.Buildings).Concat(_data.Locks).Concat(_data.Groups).Concat(_data.Media)
+        entities = entities.Concat(_context.Buildings).Concat(_context.Locks).Concat(_context.Groups).Concat(_context.Media)
             .ToList();
         foreach (var entity in entities)
         {
