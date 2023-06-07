@@ -10,7 +10,7 @@ using SimonVossSearch.Core.Parser;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<SearchDbContext>(options =>
-    options.UseNpgsql("User ID=postgres;Password=postgrespw;Host=localhost;Port=5432;Database=mydb;"));
+    options.UseNpgsql("User ID=postgres;Password=postgrespw;Host=postgres;Port=5432;Database=mydb;"));
 builder.Services.AddScoped<IDataFileParser, DataFileParser>();
 builder.Services.AddScoped<ISearchService, SearchService>();
 builder.Services.AddScoped<IDbInitializer, DbInitializer>(); 

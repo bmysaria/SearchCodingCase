@@ -18,7 +18,7 @@ public class SearchDbContext : DbContext
     }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("User ID=postgres;Password=postgrespw;Host=localhost;Port=5432;Database=mydb;");
+        optionsBuilder.UseNpgsql("User ID=postgres;Password=postgrespw;Host=postgres;Port=5432;Database=mydb;");
     }
 
     protected override void OnModelCreating(ModelBuilder builder)

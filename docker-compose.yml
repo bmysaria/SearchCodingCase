@@ -1,7 +1,16 @@
 version: '3.0'
 
 services:
-  
+  dotnet:
+    container_name: dotnet
+    build:
+      context: ./backend/SimonVossSearch
+    ports:
+      - 80:80
+    depends_on:
+      - postgres
+    restart: always
+    
   postgres:
     container_name: postgres
     # образ
