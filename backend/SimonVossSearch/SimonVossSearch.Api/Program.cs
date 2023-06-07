@@ -1,13 +1,19 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using Microsoft.EntityFrameworkCore;
+using Persistence;
 using SimonVossSearch.Core;
 using SimonVossSearch.Core.Model;
+using SimonVossSearch.Core.Parser;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<SearchDbContext>(options =>
+    options.UseNpgsql("User ID=postgres;Password=postgrespw;Host=localhost;Port=5432;Database=mydb;"));
 builder.Services.AddSingleton<TfidfVectorizer>(); // the idea is to reuse the matrix for better calculations in the SearchService/this calculated data can be cached 
 builder.Services.AddTransient<ISearchService, SearchService>();
+builder.Services.AddScoped<IDbInitializer, DbInitializer>(); 
 
 
 builder.Services.AddControllers();
@@ -17,4 +23,14 @@ var app = builder.Build();
 
 app.MapControllers();
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000"));
+SeedDatabase();
 app.Run();
+
+void SeedDatabase()
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+        dbInitializer.Initialize();
+    }
+}
