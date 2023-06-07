@@ -1,6 +1,6 @@
 using SimonVossSearch.Core.Parser;
 
-namespace SimonVossSearch.Core;
+namespace SimonVossSearch.Core.Vectorizer;
 
 public class TfidfVectorizer
 {
