@@ -10,6 +10,16 @@ services:
     depends_on:
       - postgres
     restart: always
+  
+  react:
+    container_name: react
+    build:
+      context: ./frontend
+    ports:
+      - '3000:3000'
+    depends_on:
+      - dotnet
+    restart: always
     
   postgres:
     container_name: postgres
