@@ -13,9 +13,7 @@ const Search =() => {
     const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
      async function searchRequest(targetString:string)
     {
-        console.log(searchTerm);
         try {
-            console.log('TRY');
             const response = await  fetch("http://localhost:80/api/Search/" + targetString, {
                 method: 'get',
                 mode: 'cors',
