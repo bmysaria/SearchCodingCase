@@ -16,7 +16,7 @@ const Search =() => {
         console.log(searchTerm);
         try {
             console.log('TRY');
-            const response = await  fetch("https://localhost:7144/api/Search/" + targetString, {
+            const response = await  fetch("http://localhost:80/api/Search/" + targetString, {
                 method: 'get',
                 mode: 'cors',
                 headers: {
