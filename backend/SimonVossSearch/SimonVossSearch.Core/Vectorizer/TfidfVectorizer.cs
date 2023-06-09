@@ -21,7 +21,7 @@ public class TfidfVectorizer
         FindIdf(docFreq);
         Normalize();
     }
-    private List<Dictionary<string, int>> FindDocFreq()
+     private List<Dictionary<string, int>> FindDocFreq()
     {
         var docFreq = new List<Dictionary<string, int>>();
         foreach (var field in Fields)

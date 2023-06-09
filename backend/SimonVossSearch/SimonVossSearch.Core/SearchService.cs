@@ -24,7 +24,7 @@ public class SearchService : ISearchService
     {
         _vectorizer = TfidfMemoryCache.GetOrCreate("vectorizer", parser);
     }
-    public List<SearchResultDto> Execute(string targetString)
+      public List<SearchResultDto> Execute(string targetString)
     {
 
         var wordTerms = FindWordTermsInTargetString(targetString);
