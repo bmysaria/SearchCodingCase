@@ -31,7 +31,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Gästezimmer 4.OG",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-A89F98F3",
       "floor": "4.OG",
       "roomNumber": "454"
@@ -41,7 +41,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "WC Herren 3.OG süd",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-C043133A",
       "floor": "3.OG",
       "roomNumber": "WC.HL"
@@ -51,7 +51,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "WC Damen 3.OG süd",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-F40C9966",
       "floor": "3.OG",
       "roomNumber": "WC.DL"
@@ -61,7 +61,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "WC Herren 3.OG west",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-82CE310A",
       "floor": "3.OG",
       "roomNumber": "WC.HR"
@@ -71,7 +71,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "WC Damen 3.OG west",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-B681BB56",
       "floor": "3.OG",
       "roomNumber": "WC.DR"
@@ -81,7 +81,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Schulungsraum",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-5DE29561",
       "floor": "EG",
       "roomNumber": "S01"
@@ -91,7 +91,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Besprechungsraum 1.OG",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-9590FAD2",
       "floor": "1.OG",
       "roomNumber": "117"
@@ -101,7 +101,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Besprechungsraum 3.OG",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-F5CC4F99",
       "floor": "3.OG",
       "roomNumber": "332"
@@ -111,7 +111,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Besprechungsraum 4.OG klein",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-234FFA7D",
       "floor": "4.OG",
       "roomNumber": "402"
@@ -121,7 +121,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Besprechungsraum 4.OG groß",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-41302C30",
       "floor": "4.OG",
       "roomNumber": "408"
@@ -131,9 +131,9 @@
       "buildingId": "9605186f-7eb4-4f40-967e-2885d9a8b3c4",
       "type": "Cylinder",
       "name": "Besprechungsraum Osterfeld klein",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-43C3F2C8",
-      "floor": null,
+      "floor": "",
       "roomNumber": "B.01"
     },
     {
@@ -141,9 +141,9 @@
       "buildingId": "9605186f-7eb4-4f40-967e-2885d9a8b3c4",
       "type": "Cylinder",
       "name": "Besprechungsraum Osterfeld groß",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-21BC2485",
-      "floor": null,
+      "floor": "",
       "roomNumber": "B.02"
     },
     {
@@ -151,7 +151,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "SmartHandle",
       "name": "Werkstatt 1",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-049E18CE",
       "floor": "3.OG",
       "roomNumber": "460"
@@ -161,7 +161,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "SmartHandle",
       "name": "Werkstatt 2",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-B9547400",
       "floor": "3.OG",
       "roomNumber": "465"
@@ -171,7 +171,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "SmartHandle",
       "name": "Werkstatt 3",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-64C2AD85",
       "floor": "3.OG",
       "roomNumber": "468"
@@ -181,7 +181,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Flatley/Parker",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-27BF2D3B",
       "floor": "3.OG",
       "roomNumber": "320"
@@ -191,7 +191,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Lang/Denesik",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-EBD15B0B",
       "floor": "3.OG",
       "roomNumber": "321"
@@ -201,7 +201,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Blick",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-0CA0DC80",
       "floor": "3.OG",
       "roomNumber": "322"
@@ -211,7 +211,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Kertzmann",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-C05F8889",
       "floor": "3.OG",
       "roomNumber": "323"
@@ -221,7 +221,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Kling/Hauck",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-F7F462B3",
       "floor": "3.OG",
       "roomNumber": "324"
@@ -231,7 +231,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Berge",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-58AFDCAB",
       "floor": "3.OG",
       "roomNumber": "325"
@@ -241,7 +241,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Kerluke/Bradtke",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-CBDD200B",
       "floor": "3.OG",
       "roomNumber": "326"
@@ -251,7 +251,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Crona/Pacocha",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-06D6CE73",
       "floor": "3.OG",
       "roomNumber": "327"
@@ -261,7 +261,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Wisozk/Lang",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-2D103CA2",
       "floor": "3.OG",
       "roomNumber": "328"
@@ -271,7 +271,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Purdy/Heller",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-BDEA281D",
       "floor": "3.OG",
       "roomNumber": "329"
@@ -281,7 +281,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Bednar/Maggio/Morar",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-B4E3BF8F",
       "floor": "3.OG",
       "roomNumber": "339"
@@ -291,7 +291,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "McLaughlin",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-0F8AE86A",
       "floor": "4.OG",
       "roomNumber": "436"
@@ -301,7 +301,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "McKenzie/Steuber/Lang",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-E37B8571",
       "floor": "4.OG",
       "roomNumber": "437"
@@ -311,7 +311,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Harris/Bechtelar",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-62C8D526",
       "floor": "4.OG",
       "roomNumber": "438"
@@ -321,7 +321,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Veum/Wilderman",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-7C487BC3",
       "floor": "4.OG",
       "roomNumber": "439"
@@ -331,7 +331,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Leannon/Donnelly",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-B440946B",
       "floor": "4.OG",
       "roomNumber": "440"
@@ -341,7 +341,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Sipes/Fay",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-5F28F488",
       "floor": "4.OG",
       "roomNumber": "441"
@@ -351,7 +351,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Turner/Welch",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-32E78952",
       "floor": "4.OG",
       "roomNumber": "442"
@@ -361,7 +361,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Zieme",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-0DD11BFD",
       "floor": "4.OG",
       "roomNumber": "443"
@@ -371,7 +371,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "SmartHandle",
       "name": "Mohr",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-19EAB8A6",
       "floor": "4.OG",
       "roomNumber": "428"
@@ -381,7 +381,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "SmartHandle",
       "name": "McCullough/Tillman/Halvorson",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-B4D3673E",
       "floor": "4.OG",
       "roomNumber": "429"
@@ -391,7 +391,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "SmartHandle",
       "name": "Wilderman/Kohler/Hettinger",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-52427309",
       "floor": "4.OG",
       "roomNumber": "430"
@@ -401,7 +401,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "SmartHandle",
       "name": "Gottlieb/Moen/Dach",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-46CCEB12",
       "floor": "4.OG",
       "roomNumber": "431"
@@ -411,7 +411,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "SmartHandle",
       "name": "Swift/Bednar/Cassin",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-8C16902B",
       "floor": "4.OG",
       "roomNumber": "432"
@@ -421,7 +421,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "SmartHandle",
       "name": "Schoen/Hermiston/Kuphal",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-CA37EE93",
       "floor": "4.OG",
       "roomNumber": "433"
@@ -431,7 +431,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "SmartHandle",
       "name": "Harber/Lubowitz/Mueller",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-7495C44A",
       "floor": "4.OG",
       "roomNumber": "434"
@@ -441,7 +441,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Berge/Schoen",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-722217E0",
       "floor": "3.OG",
       "roomNumber": "340"
@@ -451,7 +451,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Lemke",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-E7A26961",
       "floor": "3.OG",
       "roomNumber": "341"
@@ -461,7 +461,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Carroll/Ebert",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-E51A2150",
       "floor": "3.OG",
       "roomNumber": "342"
@@ -471,7 +471,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Ziemann/Nitzsche",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-FA22D6F8",
       "floor": "3.OG",
       "roomNumber": "343"
@@ -481,7 +481,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Harvey",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-453C0F28",
       "floor": "3.OG",
       "roomNumber": "344"
@@ -491,7 +491,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Towne/Schmitt",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-7E0EF358",
       "floor": "3.OG",
       "roomNumber": "345"
@@ -501,7 +501,7 @@
       "buildingId": "0cccab2b-bc8d-44c5-b248-8a9ca6d7e899",
       "type": "Cylinder",
       "name": "Lowe",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-2E1DB976",
       "floor": "3.OG",
       "roomNumber": "346"
@@ -521,57 +521,57 @@
     {
       "id": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "name": "Vertriebdienst",
-      "description": null
+      "description": ""
     },
     {
       "id": "66857cbd-780e-4ac7-b2b4-4e27697e0f67",
       "name": "Einkauf",
-      "description": null
+      "description": ""
     },
     {
       "id": "c33bc82c-b5d9-4f17-ae03-b8190e496bf3",
       "name": "Buchhaltung",
-      "description": null
+      "description": ""
     },
     {
       "id": "dc4acc1a-2242-432a-8281-7e257c52e677",
       "name": "Marketing",
-      "description": null
+      "description": ""
     },
     {
       "id": "3a2dc9f1-9f72-4fbf-8b44-56324e999e53",
       "name": "Project Management",
-      "description": null
+      "description": ""
     },
     {
       "id": "a9d4ac7b-754e-4a1f-b76e-34be75995d32",
       "name": "Mechanik & Mechatronik",
-      "description": null
+      "description": ""
     },
     {
       "id": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "name": "Hardware Entwicklung",
-      "description": null
+      "description": ""
     },
     {
       "id": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "name": "Software Entwicklung",
-      "description": null
+      "description": ""
     },
     {
       "id": "20645cff-16ec-4ba2-9089-65595d07c6e4",
       "name": "Qualitätskontrolle",
-      "description": null
+      "description": ""
     },
     {
       "id": "ad457a8e-876e-4063-88e0-2ce10b9ab334",
       "name": "Support",
-      "description": null
+      "description": ""
     },
     {
       "id": "a8fb8533-15dd-4a12-bd52-977b59caf77d",
       "name": "Reinigungsdienst",
-      "description": null
+      "description": ""
     }
   ],
   "media": [
@@ -580,7 +580,7 @@
       "groupId": "70c886f5-b74e-49f4-8d9f-cf2d6645d4d6",
       "type": "Card",
       "owner": "Gast 1",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-378D17F6"
     },
     {
@@ -588,7 +588,7 @@
       "groupId": "70c886f5-b74e-49f4-8d9f-cf2d6645d4d6",
       "type": "Card",
       "owner": "Gast 2",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-B1196558"
     },
     {
@@ -596,7 +596,7 @@
       "groupId": "70c886f5-b74e-49f4-8d9f-cf2d6645d4d6",
       "type": "Card",
       "owner": "Gast 3",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-7A45B6FD"
     },
     {
@@ -604,7 +604,7 @@
       "groupId": "abf2f0f5-ca6c-47c6-a018-dffd3e59d3ea",
       "type": "TransponderWithCardInlay",
       "owner": "Mrs. Quinton Stanton",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-B28837DB"
     },
     {
@@ -612,7 +612,7 @@
       "groupId": "abf2f0f5-ca6c-47c6-a018-dffd3e59d3ea",
       "type": "TransponderWithCardInlay",
       "owner": "Modesto Bradtke",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-ADB2C586"
     },
     {
@@ -620,7 +620,7 @@
       "groupId": "abf2f0f5-ca6c-47c6-a018-dffd3e59d3ea",
       "type": "TransponderWithCardInlay",
       "owner": "Shirley Walter",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-45DF73F0"
     },
     {
@@ -628,7 +628,7 @@
       "groupId": "abf2f0f5-ca6c-47c6-a018-dffd3e59d3ea",
       "type": "TransponderWithCardInlay",
       "owner": "Helen Pollich",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-92E308C4"
     },
     {
@@ -636,7 +636,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Rosalia Hermiston",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-4D7406A9"
     },
     {
@@ -644,7 +644,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Camryn Kessler",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-94D8BE2F"
     },
     {
@@ -652,7 +652,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Trystan Doyle DDS",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-E288BEDD"
     },
     {
@@ -660,7 +660,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Breanne Christiansen",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-65FFCA2C"
     },
     {
@@ -668,7 +668,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Clement Dare",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-A3F8600C"
     },
     {
@@ -676,7 +676,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Casimer Doyle",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-D58D998E"
     },
     {
@@ -684,7 +684,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Mya Hills",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-87091016"
     },
     {
@@ -692,7 +692,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Miss Aurelio Rodriguez",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-8D05FDA9"
     },
     {
@@ -700,7 +700,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Emmie Kirlin",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-D3D747CD"
     },
     {
@@ -708,7 +708,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Camden Marquardt",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-21F04AF7"
     },
     {
@@ -716,7 +716,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Ms. Pink Hessel",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-EE577D31"
     },
     {
@@ -724,7 +724,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Pearlie Von I",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-5F4F0141"
     },
     {
@@ -732,7 +732,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Kelli Swift",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-FC2133D5"
     },
     {
@@ -740,7 +740,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Raquel Raynor",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-B75354DC"
     },
     {
@@ -748,7 +748,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Noemie Ullrich",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-5C56C7EC"
     },
     {
@@ -756,7 +756,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Brendon Ruecker",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-2693607D"
     },
     {
@@ -764,7 +764,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Walton Wilkinson IV",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-57E11796"
     },
     {
@@ -772,7 +772,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Lulu Kreiger",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-4D447883"
     },
     {
@@ -780,7 +780,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Zola Stroman",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-1781AECE"
     },
     {
@@ -788,7 +788,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Dino McKenzie",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-B6DDA47E"
     },
     {
@@ -796,7 +796,7 @@
       "groupId": "39408213-bbd6-45f9-8833-1c50531dfdf1",
       "type": "Transponder",
       "owner": "Ayden Legros",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-5A5DA1AD"
     },
     {
@@ -804,7 +804,7 @@
       "groupId": "66857cbd-780e-4ac7-b2b4-4e27697e0f67",
       "type": "Transponder",
       "owner": "Rick Bayer DVM",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-A72D5E72"
     },
     {
@@ -812,7 +812,7 @@
       "groupId": "66857cbd-780e-4ac7-b2b4-4e27697e0f67",
       "type": "Transponder",
       "owner": "Zula Cruickshank Sr.",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-7603ECFF"
     },
     {
@@ -820,7 +820,7 @@
       "groupId": "66857cbd-780e-4ac7-b2b4-4e27697e0f67",
       "type": "Transponder",
       "owner": "Leslie Treutel",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-5D6080D2"
     },
     {
@@ -828,7 +828,7 @@
       "groupId": "66857cbd-780e-4ac7-b2b4-4e27697e0f67",
       "type": "Transponder",
       "owner": "Berneice Parisian",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-4F9B678C"
     },
     {
@@ -836,7 +836,7 @@
       "groupId": "66857cbd-780e-4ac7-b2b4-4e27697e0f67",
       "type": "Transponder",
       "owner": "Tierra Schneider",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-79EC88B2"
     },
     {
@@ -844,7 +844,7 @@
       "groupId": "c33bc82c-b5d9-4f17-ae03-b8190e496bf3",
       "type": "Transponder",
       "owner": "Helen Beier",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-15B2DF92"
     },
     {
@@ -852,7 +852,7 @@
       "groupId": "c33bc82c-b5d9-4f17-ae03-b8190e496bf3",
       "type": "Transponder",
       "owner": "Eula Metz",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-E1CE6282"
     },
     {
@@ -860,7 +860,7 @@
       "groupId": "c33bc82c-b5d9-4f17-ae03-b8190e496bf3",
       "type": "Transponder",
       "owner": "Elyssa Lakin",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-5DD0D401"
     },
     {
@@ -868,7 +868,7 @@
       "groupId": "c33bc82c-b5d9-4f17-ae03-b8190e496bf3",
       "type": "Transponder",
       "owner": "Haylie Bins V",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-9450378C"
     },
     {
@@ -876,7 +876,7 @@
       "groupId": "c33bc82c-b5d9-4f17-ae03-b8190e496bf3",
       "type": "Transponder",
       "owner": "Golden Mraz",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-825D6F25"
     },
     {
@@ -884,7 +884,7 @@
       "groupId": "dc4acc1a-2242-432a-8281-7e257c52e677",
       "type": "Transponder",
       "owner": "Ms. Arden Kreiger",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-DA3A3B3B"
     },
     {
@@ -892,7 +892,7 @@
       "groupId": "dc4acc1a-2242-432a-8281-7e257c52e677",
       "type": "Transponder",
       "owner": "Jordan Cremin DDS",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-E992DE06"
     },
     {
@@ -900,7 +900,7 @@
       "groupId": "dc4acc1a-2242-432a-8281-7e257c52e677",
       "type": "Transponder",
       "owner": "Vita Corwin",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-62089CF8"
     },
     {
@@ -908,7 +908,7 @@
       "groupId": "dc4acc1a-2242-432a-8281-7e257c52e677",
       "type": "Transponder",
       "owner": "Bell Gulgowski",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-4C73E472"
     },
     {
@@ -916,7 +916,7 @@
       "groupId": "dc4acc1a-2242-432a-8281-7e257c52e677",
       "type": "Transponder",
       "owner": "Jack Macejkovic",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-F0DB00F1"
     },
     {
@@ -924,7 +924,7 @@
       "groupId": "3a2dc9f1-9f72-4fbf-8b44-56324e999e53",
       "type": "Transponder",
       "owner": "Concepcion Zieme",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-EBB3BCA7"
     },
     {
@@ -932,7 +932,7 @@
       "groupId": "3a2dc9f1-9f72-4fbf-8b44-56324e999e53",
       "type": "Transponder",
       "owner": "Dr. Reymundo Fay",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-95211B5E"
     },
     {
@@ -940,7 +940,7 @@
       "groupId": "3a2dc9f1-9f72-4fbf-8b44-56324e999e53",
       "type": "Transponder",
       "owner": "Lysanne Ritchie",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-DB553815"
     },
     {
@@ -948,7 +948,7 @@
       "groupId": "3a2dc9f1-9f72-4fbf-8b44-56324e999e53",
       "type": "Transponder",
       "owner": "Nathanael Brakus",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-73379682"
     },
     {
@@ -956,7 +956,7 @@
       "groupId": "3a2dc9f1-9f72-4fbf-8b44-56324e999e53",
       "type": "Transponder",
       "owner": "Myrl Kutch",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-0102E627"
     },
     {
@@ -964,7 +964,7 @@
       "groupId": "3a2dc9f1-9f72-4fbf-8b44-56324e999e53",
       "type": "Transponder",
       "owner": "Abigail Bogan",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-070E9E88"
     },
     {
@@ -972,7 +972,7 @@
       "groupId": "3a2dc9f1-9f72-4fbf-8b44-56324e999e53",
       "type": "Transponder",
       "owner": "Isabell Nicolas",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-281DA06B"
     },
     {
@@ -980,7 +980,7 @@
       "groupId": "3a2dc9f1-9f72-4fbf-8b44-56324e999e53",
       "type": "Transponder",
       "owner": "Domenica Fritsch",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-DBFD732E"
     },
     {
@@ -988,7 +988,7 @@
       "groupId": "3a2dc9f1-9f72-4fbf-8b44-56324e999e53",
       "type": "Transponder",
       "owner": "Gabrielle Kilback",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-F3A4AAE7"
     },
     {
@@ -996,7 +996,7 @@
       "groupId": "a9d4ac7b-754e-4a1f-b76e-34be75995d32",
       "type": "Transponder",
       "owner": "Corene Effertz",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-8A62B48E"
     },
     {
@@ -1004,7 +1004,7 @@
       "groupId": "a9d4ac7b-754e-4a1f-b76e-34be75995d32",
       "type": "Transponder",
       "owner": "Vincent Lakin",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-CF16E63E"
     },
     {
@@ -1012,7 +1012,7 @@
       "groupId": "a9d4ac7b-754e-4a1f-b76e-34be75995d32",
       "type": "Transponder",
       "owner": "Margaretta Hyatt V",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-7E8AF5C9"
     },
     {
@@ -1020,7 +1020,7 @@
       "groupId": "a9d4ac7b-754e-4a1f-b76e-34be75995d32",
       "type": "Transponder",
       "owner": "Ofelia Sporer DVM",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-DA01B45C"
     },
     {
@@ -1028,7 +1028,7 @@
       "groupId": "a9d4ac7b-754e-4a1f-b76e-34be75995d32",
       "type": "Transponder",
       "owner": "Ora Hermiston",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-E4FC2BC9"
     },
     {
@@ -1036,7 +1036,7 @@
       "groupId": "a9d4ac7b-754e-4a1f-b76e-34be75995d32",
       "type": "Transponder",
       "owner": "Miss Arnaldo Jenkins",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-A43A67C6"
     },
     {
@@ -1044,7 +1044,7 @@
       "groupId": "a9d4ac7b-754e-4a1f-b76e-34be75995d32",
       "type": "Transponder",
       "owner": "Faye Greenholt I",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-D69797CC"
     },
     {
@@ -1052,7 +1052,7 @@
       "groupId": "a9d4ac7b-754e-4a1f-b76e-34be75995d32",
       "type": "Transponder",
       "owner": "Mr. Rene Harber",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-76DEAEBB"
     },
     {
@@ -1060,7 +1060,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Pablo Bahringer",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-0A1F56B6"
     },
     {
@@ -1068,7 +1068,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Otilia Shanahan",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-B4703B1D"
     },
     {
@@ -1076,7 +1076,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Julianne Upton",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-744990A6"
     },
     {
@@ -1084,7 +1084,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Larue Rice",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-38A3630C"
     },
     {
@@ -1092,7 +1092,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Mr. Celestino Schaden",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-B8AD5996"
     },
     {
@@ -1100,7 +1100,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Jeramy Leffler",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-D452E4BD"
     },
     {
@@ -1108,7 +1108,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Mr. Talon Dickens",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-E7263924"
     },
     {
@@ -1116,7 +1116,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Effie Barton IV",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-7F67408F"
     },
     {
@@ -1124,7 +1124,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Terrence O'Hara",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-1AC9C2D8"
     },
     {
@@ -1132,7 +1132,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Gladyce Hane",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-0238753A"
     },
     {
@@ -1140,7 +1140,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Marcella Schinner",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-EB92C0A9"
     },
     {
@@ -1148,7 +1148,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Emely Berge Sr.",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-A1607C57"
     },
     {
@@ -1156,7 +1156,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Mrs. Isidro Goyette",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-313B4CB8"
     },
     {
@@ -1164,7 +1164,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Mrs. Fanny Connelly",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-17FC1E14"
     },
     {
@@ -1172,7 +1172,7 @@
       "groupId": "a802c953-4219-4b63-81bf-2a121a5c543c",
       "type": "Transponder",
       "owner": "Joel VonRueden V",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-E9002630"
     },
     {
@@ -1180,7 +1180,7 @@
       "groupId": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "type": "TransponderWithCardInlay",
       "owner": "Meda Feeney",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-D81E3137"
     },
     {
@@ -1188,7 +1188,7 @@
       "groupId": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "type": "TransponderWithCardInlay",
       "owner": "Laverna Skiles",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-80C35FDC"
     },
     {
@@ -1196,7 +1196,7 @@
       "groupId": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "type": "TransponderWithCardInlay",
       "owner": "Nedra Hartmann V",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-AB27F9C4"
     },
     {
@@ -1204,7 +1204,7 @@
       "groupId": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "type": "TransponderWithCardInlay",
       "owner": "Derek Weber",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-2CE66793"
     },
     {
@@ -1212,7 +1212,7 @@
       "groupId": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "type": "TransponderWithCardInlay",
       "owner": "Hailey Reichert III",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-D153E307"
     },
     {
@@ -1220,7 +1220,7 @@
       "groupId": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "type": "TransponderWithCardInlay",
       "owner": "Lamar Abbott",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-1E0334B0"
     },
     {
@@ -1228,7 +1228,7 @@
       "groupId": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "type": "TransponderWithCardInlay",
       "owner": "Hoyt Batz",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-6978F9BB"
     },
     {
@@ -1236,7 +1236,7 @@
       "groupId": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "type": "TransponderWithCardInlay",
       "owner": "Jakayla Ullrich",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-6EC98F3F"
     },
     {
@@ -1244,7 +1244,7 @@
       "groupId": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "type": "TransponderWithCardInlay",
       "owner": "Dr. Marta Heller",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-8F35CFFC"
     },
     {
@@ -1252,7 +1252,7 @@
       "groupId": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "type": "TransponderWithCardInlay",
       "owner": "Hallie Rice",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-EAC6D3D4"
     },
     {
@@ -1260,7 +1260,7 @@
       "groupId": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "type": "TransponderWithCardInlay",
       "owner": "Queenie Mraz Sr.",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-01C9773F"
     },
     {
@@ -1268,7 +1268,7 @@
       "groupId": "f445bec2-ccb5-4cb6-aff2-dec53f10d292",
       "type": "TransponderWithCardInlay",
       "owner": "Cody Hessel",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-6AD74FC8"
     },
     {
@@ -1276,7 +1276,7 @@
       "groupId": "20645cff-16ec-4ba2-9089-65595d07c6e4",
       "type": "TransponderWithCardInlay",
       "owner": "Emelie Rosenbaum IV",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-02D80F53"
     },
     {
@@ -1284,7 +1284,7 @@
       "groupId": "20645cff-16ec-4ba2-9089-65595d07c6e4",
       "type": "TransponderWithCardInlay",
       "owner": "Clementine Heathcote",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-51C69E60"
     },
     {
@@ -1292,7 +1292,7 @@
       "groupId": "20645cff-16ec-4ba2-9089-65595d07c6e4",
       "type": "TransponderWithCardInlay",
       "owner": "Treva Muller",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-0CB36E1D"
     },
     {
@@ -1300,7 +1300,7 @@
       "groupId": "20645cff-16ec-4ba2-9089-65595d07c6e4",
       "type": "TransponderWithCardInlay",
       "owner": "Queenie Von",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-49BB6B9E"
     },
     {
@@ -1308,7 +1308,7 @@
       "groupId": "20645cff-16ec-4ba2-9089-65595d07c6e4",
       "type": "TransponderWithCardInlay",
       "owner": "Clay Cremin",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-443A12B4"
     },
     {
@@ -1316,7 +1316,7 @@
       "groupId": "20645cff-16ec-4ba2-9089-65595d07c6e4",
       "type": "TransponderWithCardInlay",
       "owner": "Germaine Hermann",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-B1B0B358"
     },
     {
@@ -1324,7 +1324,7 @@
       "groupId": "ad457a8e-876e-4063-88e0-2ce10b9ab334",
       "type": "Transponder",
       "owner": "Morgan Erdman",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-D62A7212"
     },
     {
@@ -1332,7 +1332,7 @@
       "groupId": "ad457a8e-876e-4063-88e0-2ce10b9ab334",
       "type": "Transponder",
       "owner": "Dr. Stella Donnelly",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-F17CDF2E"
     },
     {
@@ -1340,7 +1340,7 @@
       "groupId": "ad457a8e-876e-4063-88e0-2ce10b9ab334",
       "type": "Transponder",
       "owner": "Michaela Huels",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-2B6244E5"
     },
     {
@@ -1348,7 +1348,7 @@
       "groupId": "ad457a8e-876e-4063-88e0-2ce10b9ab334",
       "type": "Transponder",
       "owner": "Lester McDermott",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-CE8317D8"
     },
     {
@@ -1356,7 +1356,7 @@
       "groupId": "ad457a8e-876e-4063-88e0-2ce10b9ab334",
       "type": "Transponder",
       "owner": "Danielle Stark Sr.",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-6A3B4B84"
     },
     {
@@ -1364,7 +1364,7 @@
       "groupId": "ad457a8e-876e-4063-88e0-2ce10b9ab334",
       "type": "Transponder",
       "owner": "Karelle Durgan",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-A15A2AEC"
     },
     {
@@ -1372,7 +1372,7 @@
       "groupId": "ad457a8e-876e-4063-88e0-2ce10b9ab334",
       "type": "Transponder",
       "owner": "Kelley Erdman",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-C986DB58"
     },
     {
@@ -1380,7 +1380,7 @@
       "groupId": "ad457a8e-876e-4063-88e0-2ce10b9ab334",
       "type": "Transponder",
       "owner": "Mr. Luther Terry",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-DCC4A18B"
     },
     {
@@ -1388,7 +1388,7 @@
       "groupId": "a8fb8533-15dd-4a12-bd52-977b59caf77d",
       "type": "Transponder",
       "owner": "Rebecca Barrows",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-08889EC2"
     },
     {
@@ -1396,7 +1396,7 @@
       "groupId": "a8fb8533-15dd-4a12-bd52-977b59caf77d",
       "type": "Transponder",
       "owner": "Verda Reichert",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-9AABD45B"
     },
     {
@@ -1404,7 +1404,7 @@
       "groupId": "a8fb8533-15dd-4a12-bd52-977b59caf77d",
       "type": "Transponder",
       "owner": "Joey Murray",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-4DB71AF6"
     },
     {
@@ -1412,7 +1412,7 @@
       "groupId": "a8fb8533-15dd-4a12-bd52-977b59caf77d",
       "type": "Transponder",
       "owner": "Derick Ryan",
-      "description": null,
+      "description": "",
       "serialNumber": "UID-F670F88B"
     }
   ]

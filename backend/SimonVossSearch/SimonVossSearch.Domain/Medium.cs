@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace SimonVossSearch.Core.Model.Entities;
+namespace SimonVossSearch.Domain;
 
 public class Medium : IEntity
 {
@@ -9,6 +9,6 @@ public class Medium : IEntity
     public Guid ParentId { get; set; }
     public string Type { get; set; }
     public string Owner { get; set; }
-    public object Description { get; set; }
+    public string Description { get; set; }
     public string SerialNumber { get; set; }
 }

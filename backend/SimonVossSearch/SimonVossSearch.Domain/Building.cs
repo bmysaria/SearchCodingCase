@@ -1,4 +1,4 @@
-namespace SimonVossSearch.Core.Model.Entities;
+namespace SimonVossSearch.Domain;
 
 public class Building : IEntity
 {

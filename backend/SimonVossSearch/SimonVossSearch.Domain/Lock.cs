@@ -1,4 +1,4 @@
-namespace SimonVossSearch.Core.Model.Entities;
+namespace SimonVossSearch.Domain;
 
 public class Lock : IEntity
 {
@@ -7,7 +7,7 @@ public class Lock : IEntity
     public Guid ParentId { get; set; }
     public string Type { get; set; }
     public string Name { get; set; }
-    public object Description { get; set; }
+    public string Description { get; set; }
     public string SerialNumber { get; set; }
     public string Floor { get; set; }
     public string RoomNumber { get; set; }
